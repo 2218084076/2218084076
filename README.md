@@ -38,6 +38,3 @@ Here are some ideas to get you started:
 ![Pytest](https://img.shields.io/badge/-Pytest-0A9EDC?logo=pytest&logoColor=white)
 
 ![Terry's GitHub stats](https://github-readme-stats.vercel.app/api?username=2218084076&theme=tokyonight&show_icons=true)
-
----
-> [Terry's personal page](https://2218084076.github.io/personal-blog/)
