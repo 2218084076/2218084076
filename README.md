@@ -52,5 +52,7 @@ Here are some ideas to get you started:
 ![Fusion360](https://img.shields.io/badge/-Fusion360-013E7F?style=flat&logo=Autodesk&logoColor=white)
 ![Pix4D](https://img.shields.io/badge/-Pix4D-FF9E0F?style=flat&logo=Pix4D&logoColor=white)
 
-![Terry's GitHub stats](https://github-readme-stats.vercel.app/api?username=2218084076&theme=tokyonight&show_icons=true)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=2218084076&layout=compact&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+
+
 
