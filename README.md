@@ -16,7 +16,6 @@ Here are some ideas to get you started:
 -->
 [![Terry's Blog](https://img.shields.io/badge/-Blog-000000?logo=wordpress&logoColor=white&style=for-the-badge&label=Terry's%20Blog)](https://2218084076.github.io/)
 
-
 ## 🔮 My tech stack
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=Python&logoColor=white)
@@ -52,8 +51,7 @@ Here are some ideas to get you started:
 ![Fusion360](https://img.shields.io/badge/-Fusion360-013E7F?style=flat&logo=Autodesk&logoColor=white)
 ![Pix4D](https://img.shields.io/badge/-Pix4D-FF9E0F?style=flat&logo=Pix4D&logoColor=white)
 ![Whisper](https://img.shields.io/badge/-Whisper-7289DA?style=flat&logo=OpenAI&logoColor=white)
+![OpenAI ChatGPT](https://img.shields.io/badge/-OpenAI%20ChatGPT-000000?style=flat&logo=OpenAI&logoColor=white)
+![Sync Lip](https://img.shields.io/badge/-Sync%20Lip-EA4AAA?style=flat&logo=lip-sync&logoColor=white)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=2218084076&layout=compact&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
-
-
-
