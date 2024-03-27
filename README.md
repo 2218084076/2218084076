@@ -53,5 +53,7 @@ Here are some ideas to get you started:
 ![Whisper](https://img.shields.io/badge/-Whisper-7289DA?style=flat&logo=OpenAI&logoColor=white)
 ![OpenAI ChatGPT](https://img.shields.io/badge/-OpenAI%20ChatGPT-000000?style=flat&logo=OpenAI&logoColor=white)
 ![Sync Lip](https://img.shields.io/badge/-Sync%20Lip-EA4AAA?style=flat&logo=lip-sync&logoColor=white)
+![Stable Diffusion](https://img.shields.io/badge/-Stable%20Diffusion-5555FF?style=flat&logo=&logoColor=white)
+
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=2218084076&layout=compact&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
