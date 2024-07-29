@@ -14,8 +14,8 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-[![Terry's Blog](https://img.shields.io/badge/-Blog-000000?
-logo=wordpress&logoColor=white&style=for-the-badge&label=Terry's%20Blog)](https://2218084076.github.io/)
+
+[![Terry's Blog](https://img.shields.io/badge/-Blog-000000?logo=wordpress&logoColor=white&style=for-the-badge&label=Terry's%20Blog)](https://2218084076.github.io/)
 
 ## 🔮 My tech stack
 
