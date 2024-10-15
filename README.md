@@ -54,3 +54,6 @@ Here are some ideas to get you started:
 ![OpenAI ChatGPT](https://img.shields.io/badge/-OpenAI%20ChatGPT-000000?style=flat&logo=OpenAI&logoColor=white)
 ![Sync Lip](https://img.shields.io/badge/-Sync%20Lip-EA4AAA?style=flat&logo=lip-sync&logoColor=white)
 ![Stable Diffusion](https://img.shields.io/badge/-Stable%20Diffusion-5555FF?style=flat&logo=&logoColor=white)
+![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)
+![Gradio](https://img.shields.io/badge/-Gradio-20BFC9?style=flat&logo=Gradio&logoColor=white)
+
