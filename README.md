@@ -1,25 +1,17 @@
-## Hi there 👋
-
-<!--
-**2218084076/2218084076** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
 <h1 align="center">Hi 👋, I'm Terry</h1>
 <h3 align="center">AI 全栈开发工程师</h3>
 
+- 📝 [I regularly write articles on](https://2218084076.github.io/)
+
+[//]: # (- 💬 WeChat  **terrybb-WittyCoder**)
+
+- 📫 How to reach me **terrylbo@163.com**
+
+- 📄 Know about my experiences [About](https://2218084076.github.io/about/)
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://twitter.com/stuartbb25" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="stuartbb25" height="30" width="40" /></a>
+<a href="https://twitter.com/stuartbb25" target="blank"><img align="center" src="https://terry-photography-1308467839.cos.ap-nanjing.myqcloud.com/icon/x-social-media-black-icon.svg" alt="stuartbb25" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
