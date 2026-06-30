@@ -15,6 +15,31 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Verify stats token repository access
+        env:
+          GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
+        run: |
+          if [ -z "$GH_STATS_TOKEN" ]; then
+            echo "GH_STATS_TOKEN is not configured."
+            exit 1
+          fi
+
+          response="$(curl -fsS \
+            -H "Authorization: Bearer $GH_STATS_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/user/repos?visibility=all&affiliation=owner,collaborator,organization_member&per_page=100")"
+
+          repo_count="$(echo "$response" | jq 'length')"
+          private_count="$(echo "$response" | jq '[.[] | select(.private == true)] | length')"
+
+          echo "Repositories accessible to GH_STATS_TOKEN: $repo_count"
+          echo "Private repositories accessible to GH_STATS_TOKEN: $private_count"
+
+          if [ "$private_count" -eq 0 ]; then
+            echo "GH_STATS_TOKEN cannot access any private repositories."
+            exit 1
+          fi
+
       - name: Generate stats card
         uses: stats-organization/github-readme-stats-action@v2
         with:
