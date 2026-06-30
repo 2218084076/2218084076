@@ -35,4 +35,4 @@
 ![Docker](https://img.shields.io/badge/-Docker-000?&logo=docker)
 ![Linux](https://img.shields.io/badge/-Linux-000?&logo=linux)
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=2218084076\&rank_icon=github)
+![Anurag's GitHub stats](https://github-stats-extended.vercel.app/api?username=2218084076\&rank_icon=github)
