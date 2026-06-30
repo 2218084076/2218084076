@@ -36,3 +36,7 @@
 ![Linux](https://img.shields.io/badge/-Linux-000?&logo=linux)
 
 ![Anurag's GitHub stats](https://github-stats-extended.vercel.app/api?username=2218084076\&rank_icon=github)
+
+![Terry's GitHub Stats](./profile/stats.svg)
+
+![Top Languages](./profile/top-langs.svg)
