@@ -135,17 +135,62 @@ def collect_stats():
     }
 
 
+def icon_svg(kind, x, y):
+    icons = {
+        "repo": (
+            '<path d="M3 5.5h5l1.5 2H17v9H3z"/>'
+            '<path d="M3 8h14"/>'
+        ),
+        "lock": (
+            '<rect x="4" y="8" width="12" height="8" rx="1.5"/>'
+            '<path d="M7 8V6a3 3 0 0 1 6 0v2"/>'
+        ),
+        "star": (
+            '<path d="M10 2.8l2.1 4.3 4.7.7-3.4 3.3.8 4.7L10 13.6l-4.2 2.2.8-4.7-3.4-3.3 4.7-.7z"/>'
+        ),
+        "commit": (
+            '<circle cx="10" cy="10" r="3.2"/>'
+            '<path d="M2.5 10h4.3M13.2 10h4.3"/>'
+        ),
+        "pr": (
+            '<circle cx="5" cy="4" r="2"/>'
+            '<circle cx="5" cy="16" r="2"/>'
+            '<circle cx="15" cy="16" r="2"/>'
+            '<path d="M5 6v8M9 4h2a4 4 0 0 1 4 4v6"/>'
+        ),
+        "percent": (
+            '<path d="M4 16L16 4"/>'
+            '<circle cx="5.2" cy="5.2" r="1.8"/>'
+            '<circle cx="14.8" cy="14.8" r="1.8"/>'
+        ),
+        "issue": (
+            '<circle cx="10" cy="10" r="7"/>'
+            '<path d="M10 5.8v5.2"/>'
+            '<path d="M10 14.4h.01"/>'
+        ),
+        "review": (
+            '<path d="M2.5 10s3-5 7.5-5 7.5 5 7.5 5-3 5-7.5 5-7.5-5-7.5-5z"/>'
+            '<circle cx="10" cy="10" r="2.4"/>'
+        ),
+        "contrib": (
+            '<rect x="4" y="4" width="12" height="9" rx="1.5"/>'
+            '<path d="M7 16h6M10 13v3"/>'
+        ),
+    }
+    return f'<g class="icon" transform="translate({x} {y})">{icons[kind]}</g>'
+
+
 def render_svg(stats):
     rows = [
-        ("Repositories:", stats["repositories"]),
-        ("Private Repositories:", stats["private_repositories"]),
-        ("Total Stars Earned:", stats["stars"]),
-        ("Total Commits:", stats["commits"]),
-        ("Total PRs:", stats["prs"]),
-        ("Merged PRs Percentage:", stats["merged_prs_percentage"]),
-        ("Total Issues:", stats["issues"]),
-        ("PRs Reviewed:", stats["prs_reviewed"]),
-        ("Contributed to (last year):", stats["contributed_to"]),
+        ("repo", "Repositories:", stats["repositories"]),
+        ("lock", "Private Repositories:", stats["private_repositories"]),
+        ("star", "Total Stars Earned:", stats["stars"]),
+        ("commit", "Total Commits:", stats["commits"]),
+        ("pr", "Total PRs:", stats["prs"]),
+        ("percent", "Merged PRs Percentage:", stats["merged_prs_percentage"]),
+        ("issue", "Total Issues:", stats["issues"]),
+        ("review", "PRs Reviewed:", stats["prs_reviewed"]),
+        ("contrib", "Contributed to (last year):", stats["contributed_to"]),
     ]
 
     width = 520
@@ -153,14 +198,14 @@ def render_svg(stats):
     top = 66
     height = top + row_height * len(rows) + 28
     value_x = 330
-    icon_x = 34
+    icon_x = 32
     label_x = 58
 
     row_markup = []
-    for index, (label, value) in enumerate(rows):
+    for index, (icon, label, value) in enumerate(rows):
         y = top + index * row_height
         row_markup.append(
-            f'<text x="{icon_x}" y="{y}" class="icon">*</text>'
+            icon_svg(icon, icon_x, y - 14) +
             f'<text x="{label_x}" y="{y}" class="label">{escape(label)}</text>'
             f'<text x="{value_x}" y="{y}" class="value">{escape(str(value))}</text>'
         )
@@ -173,7 +218,8 @@ def render_svg(stats):
     .title {{ fill: #e07a5f; font: 700 18px 'Segoe UI', Ubuntu, Sans-Serif; }}
     .label {{ fill: #f4d6b1; font: 700 14px 'Segoe UI', Ubuntu, Sans-Serif; }}
     .value {{ fill: #f4d6b1; font: 700 14px 'Segoe UI', Ubuntu, Sans-Serif; }}
-    .icon {{ fill: #f2cc8f; font: 700 12px 'Segoe UI', Ubuntu, Sans-Serif; }}
+    .icon {{ stroke: #f2cc8f; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; fill: none; }}
+    .icon-fill {{ fill: #f2cc8f; stroke: none; }}
     .mark {{ fill: #222936; }}
     .ring {{ stroke: #e07a5f; stroke-width: 6; fill: #f4d6b1; }}
   </style>
