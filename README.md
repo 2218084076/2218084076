@@ -1,13 +1,15 @@
-<h1 align="center">Hi 👋, I'm Terry</h1>
-<h3 align="center">AI 全栈开发工程师</h3>
+<h2 align="center">Hi 👋, I'm Terry 王棒棒</h2>
+<h4 align="center">AI 全栈开发工程师</h3>
 
-- 📝 [I regularly write articles on](https://2218084076.github.io/)
+- 📝 [I regularly write articles on](https://terry-blog.iepose.cn)
 
 [//]: # (- 💬 WeChat  **TerryAIronyMan**)
 
 - 📫 How to reach me **terrylbo@163.com**
 
-- 📄 Know about my experiences [About](https://2218084076.github.io/about/)
+[//]: # (- 📄 Know about my experiences [About]&#40;https://2218084076.github.io/about/&#41;)
+
+- 📄 Know about my experiences [About](https://terry-blog.iepose.cn/about)
 
 <h3 align="left">Languages and Tools:</h3>
 
