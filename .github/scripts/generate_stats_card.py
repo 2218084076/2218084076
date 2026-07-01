@@ -181,7 +181,7 @@ def icon_svg(kind, x, y):
 
 
 def github_logo_svg(x, y, scale=1.0):
-    return f"""<g transform="translate({x} {y}) scale({scale})" class="mark">
+    return f"""<g transform="translate({x} {y}) scale({scale})" class="mark" filter="url(#logoShadow)">
     <path d="M16 1.5C7.7 1.5 1 8.2 1 16.5c0 6.6 4.3 12.2 10.2 14.2.7.1 1-.3 1-.7v-2.6c-4.2.9-5.1-1.8-5.1-1.8-.7-1.7-1.7-2.2-1.7-2.2-1.4-1 .1-1 .1-1 1.5.1 2.3 1.6 2.3 1.6 1.4 2.3 3.6 1.6 4.4 1.3.1-1 .5-1.6.9-2-3.3-.4-6.8-1.7-6.8-7.4 0-1.6.6-3 1.5-4-.2-.4-.7-2 .1-4 0 0 1.3-.4 4.1 1.5 1.2-.3 2.5-.5 3.9-.5s2.7.2 3.9.5c2.9-1.9 4.1-1.5 4.1-1.5.8 2 .3 3.6.1 4 .9 1 1.5 2.3 1.5 4 0 5.8-3.5 7-6.8 7.4.5.5 1 1.4 1 2.8V30c0 .4.3.8 1 .7C26.7 28.7 31 23.1 31 16.5 31 8.2 24.3 1.5 16 1.5z"/>
   </g>"""
 
@@ -219,6 +219,11 @@ def render_svg(stats):
     return f"""<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Terry's Stats</title>
   <desc id="desc">GitHub statistics for {escape(USERNAME)}</desc>
+  <defs>
+    <filter id="logoShadow" x="-35%" y="-35%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#111827" flood-opacity="0.45"/>
+    </filter>
+  </defs>
   <style>
     .card {{ fill: #373f51; stroke: #e6edf3; stroke-width: 1; }}
     .title {{ fill: #e07a5f; font: 700 18px 'Segoe UI', Ubuntu, Sans-Serif; }}
