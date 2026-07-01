@@ -180,6 +180,12 @@ def icon_svg(kind, x, y):
     return f'<g class="icon" transform="translate({x} {y})">{icons[kind]}</g>'
 
 
+def github_logo_svg(x, y, scale=1.0):
+    return f"""<g transform="translate({x} {y}) scale({scale})" class="mark">
+    <path d="M16 1.5C7.7 1.5 1 8.2 1 16.5c0 6.6 4.3 12.2 10.2 14.2.7.1 1-.3 1-.7v-2.6c-4.2.9-5.1-1.8-5.1-1.8-.7-1.7-1.7-2.2-1.7-2.2-1.4-1 .1-1 .1-1 1.5.1 2.3 1.6 2.3 1.6 1.4 2.3 3.6 1.6 4.4 1.3.1-1 .5-1.6.9-2-3.3-.4-6.8-1.7-6.8-7.4 0-1.6.6-3 1.5-4-.2-.4-.7-2 .1-4 0 0 1.3-.4 4.1 1.5 1.2-.3 2.5-.5 3.9-.5s2.7.2 3.9.5c2.9-1.9 4.1-1.5 4.1-1.5.8 2 .3 3.6.1 4 .9 1 1.5 2.3 1.5 4 0 5.8-3.5 7-6.8 7.4.5.5 1 1.4 1 2.8V30c0 .4.3.8 1 .7C26.7 28.7 31 23.1 31 16.5 31 8.2 24.3 1.5 16 1.5z"/>
+  </g>"""
+
+
 def render_svg(stats):
     rows = [
         ("repo", "Repositories:", stats["repositories"]),
@@ -220,13 +226,13 @@ def render_svg(stats):
     .value {{ fill: #f4d6b1; font: 700 14px 'Segoe UI', Ubuntu, Sans-Serif; }}
     .icon {{ stroke: #f2cc8f; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; fill: none; }}
     .icon-fill {{ fill: #f2cc8f; stroke: none; }}
-    .mark {{ fill: #222936; }}
+    .mark {{ fill: #222936; stroke: none; }}
     .ring {{ stroke: #e07a5f; stroke-width: 6; fill: #f4d6b1; }}
   </style>
   <rect class="card" x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="4.5"/>
   <text x="28" y="34" class="title">Terry's Stats</text>
   <circle class="ring" cx="430" cy="126" r="40"/>
-  <text x="405" y="137" class="mark" style="font: 800 30px 'Segoe UI', Ubuntu, Sans-Serif;">GH</text>
+  {github_logo_svg(407, 113, 1.5)}
   {''.join(row_markup)}
 </svg>
 """
