@@ -55,10 +55,13 @@ jobs:
           path: profile/top-langs.svg
           token: ${{ secrets.STATS_EXTENDED_VERCEL_TOKEN }}
 
+      - name: Update README image cache bust
+        run: python .github/scripts/update_readme_cache_bust.py
+
       - name: Commit cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f profile/*.svg
+          git add -f profile/*.svg README.md
           git commit -m "Update GitHub stats cards" || exit 0
           git push
