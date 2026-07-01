@@ -1,4 +1,4 @@
-<h2 align="center">Hi 👋, I'm Terry 王棒棒</h2>
+<h2 align="center">Hi 👋, I'm Terry</h2>
 <h4 align="center">AI 全栈开发工程师</h3>
 
 - 📝 [I regularly write articles on](https://terry-blog.iepose.cn)
