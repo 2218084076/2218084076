@@ -1,8 +1,6 @@
 name: Update GitHub Stats Cards
 
 on:
-  schedule:
-    - cron: "59 11 * * *"
   workflow_dispatch:
 
 jobs:
