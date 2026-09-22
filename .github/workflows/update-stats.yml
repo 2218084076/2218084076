@@ -3,6 +3,10 @@ name: Update GitHub Stats Cards
 on:
   workflow_dispatch:
 
+concurrency:
+  group: update-github-stats-cards
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -42,7 +46,7 @@ jobs:
         env:
           GH_STATS_TOKEN: ${{ secrets.STATS_EXTENDED_VERCEL_TOKEN }}
           STATS_USERNAME: 2218084076
-          STATS_CARD_PATH: profile/stats.svg
+          STATS_CARD_PATH: profile/stats-${{ github.run_id }}-${{ github.run_attempt }}.svg
         run: python .github/scripts/generate_stats_card.py
 
       - name: Generate top languages card
@@ -50,16 +54,19 @@ jobs:
         with:
           card: top-langs
           options: username=2218084076&layout=compact&count_private=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR
-          path: profile/top-langs.svg
+          path: profile/top-langs-${{ github.run_id }}-${{ github.run_attempt }}.svg
           token: ${{ secrets.STATS_EXTENDED_VERCEL_TOKEN }}
 
-      - name: Update README image cache bust
+      - name: Update README image references
+        env:
+          STATS_CARD_PATH: profile/stats-${{ github.run_id }}-${{ github.run_attempt }}.svg
+          TOP_LANGUAGES_CARD_PATH: profile/top-langs-${{ github.run_id }}-${{ github.run_attempt }}.svg
         run: python .github/scripts/update_readme_cache_bust.py
 
       - name: Commit cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f profile/*.svg README.md
+          git add -A -f -- profile README.md
           git commit -m "Update GitHub stats cards" || exit 0
           git push
